@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #0C1E3E;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -14,10 +14,7 @@
 }
 
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  max-width: 1920px;
 }
 
 a {
@@ -25,6 +22,7 @@ a {
   color: #646cff;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
 }
@@ -34,5 +32,109 @@ body {
   display: flex;
   place-items: center;
   min-width: 320px;
+  max-width: 1920px;
   min-height: 100vh;
+  overflow-x: hidden;
+}
+
+section {
+  width: 100%;
+  height: 100%;
+  max-width: 1920px;
+  max-height: 1080px;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.3em;
+}
+
+button {
+  padding: 10px;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  width: 1920px;
+  margin: 15rem 0;
+  
+
+  .col {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+
+  }
+
+  .row_info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    h1{
+      font-size: 4rem;
+    }
+    button {
+      width: 50%;
+      padding: 20px;
+      text-transform: uppercase;
+      border-radius: 8px;
+      font-size: 17px;
+      font-weight: 500;
+      color: #ffffff80;
+      text-shadow: none;
+      background: transparent;
+      cursor: pointer;
+      box-shadow: transparent;
+      border: 1px solid #ffffff80;
+      transition: 0.5s ease;
+      user-select: none;
+    }
+    #btn:hover, :focus {
+      color: #ffffff;
+      background: #38FBDB;
+      text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+      box-shadow: 0 0 5px #38FBDB, 0 0 20px #38FBDB, 0 0 50px #38FBDB,
+        0 0 100px #38FBDB;
+    }
+  }
+
+  .row_social {
+    display: flex;
+    flex-wrap: wrap;
+    vertical-align: middle;
+    flex-direction: column;
+    gap: 20px;
+
+    .icon{
+      display: block;
+      margin-inline:auto ;
+      text-align: center;
+      height: 7.7%;
+      width: 100%;
+      padding: 10px;
+      border-radius: 10%;
+      /* color: #ffffff80; */
+      cursor: pointer;
+      transition: 0.5s ease;
+      font-size: 30px;
+    }
+    .icon:hover, :focus {
+      color: #ffffff;
+      background: #38FBDB;
+      text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+      box-shadow: 0 0 5px #38FBDB, 0 0 20px #38FBDB, 0 0 50px #38FBDB,
+        0 0 100px #38FBDB;
+    }
+    
+  }
 }
