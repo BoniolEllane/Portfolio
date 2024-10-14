@@ -21,8 +21,8 @@ function App() {
             </div>
             <div className="row_social">
               <div className="icon" id='facebook'><PiFacebookLogoThin /></div>
-              <div className="icon" id='Linkedin'><PiLinkedinLogoThin/></div>
-              <div className="icon" id='phone'><PiPhoneThin/></div>
+              <div className="icon" id='Linkedin'><PiLinkedinLogoThin /></div>
+              <div className="icon" id='phone'><PiPhoneThin /></div>
             </div>
           </div>
         </section>
@@ -38,19 +38,19 @@ function App() {
             </div>
           </div> */}
 
-        <div className="projects-slide-contain">
+        <section className="projects-slide-contain">
           <h2>Showcased below are the previous works from the past.</h2>
-          {/* <hr /> */}
-
-          <div className="proj">Collaborate Design for UX/UI TUP Manila Website</div>
-          <div className="proj">Collaborate Work for Fil-Chi Job Fair 2024</div>
-          <div className="proj">The Writhing Labyrinth: A Wumpus Game using Random Walk Algorithm</div>
-          <div className="proj">ClearPath Website Design</div>
-          <div className="proj">Admin Side Profile for GDS Booking System</div>
-          <div className="proj">MasterApp for GDS Company</div>
-          <div className="proj">Ongpin Tower Website: On Progress</div>
-
-        </div>
+          <hr />
+          <div className="project_slide">
+            <div className="proj">Collaborate Design for UX/UI TUP Manila Website</div>
+            <div className="proj">Collaborate Work for Fil-Chi Job Fair 2024</div>
+            <div className="proj">The Writhing Labyrinth: A Wumpus Game using Random Walk Algorithm</div>
+            <div className="proj">ClearPath Website Design</div>
+            {/* <div className="proj">Admin Side Profile for GDS Booking System</div> */}
+            <div className="proj">MasterApp for GDS Company</div>
+            <div className="proj">Ongpin Tower Website: On Progress</div>
+          </div>
+        </section>
       </div>
     </>
   )

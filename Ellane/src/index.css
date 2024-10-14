@@ -65,15 +65,12 @@ button {
   flex-direction: column;
   width: 1920px;
   margin: 15rem 0;
-  
 
   .col {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-evenly;
-    
-
   }
 
   .row_info {
@@ -135,6 +132,19 @@ button {
       box-shadow: 0 0 5px #38FBDB, 0 0 20px #38FBDB, 0 0 50px #38FBDB,
         0 0 100px #38FBDB;
     }
+    
+  }
+}
+
+.projects-slide-contain{
+  background-color: #d9d9d9;
+  color: #0C1E3E;
+  padding: 5% 0%;
+  h2{
+    font-size: 4em;
+    text-align: center;
+  }
+  .project_slide{
     
   }
 }
