@@ -57,7 +57,7 @@ h3 {
 }
 
 button {
-  padding: 10px;
+  padding: 15px;
 }
 
 .hero {
@@ -65,6 +65,10 @@ button {
   flex-direction: column;
   width: 1920px;
   margin: 15rem 0;
+  p{
+    word-spacing: 50px;
+  }
+  
 
   .col {
     display: flex;
@@ -77,31 +81,47 @@ button {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    h1{
+
+    h1 {
       font-size: 4rem;
     }
+
+    /* From Uiverse.io by adamgiebl */
     button {
-      width: 50%;
-      padding: 20px;
-      text-transform: uppercase;
-      border-radius: 8px;
-      font-size: 17px;
-      font-weight: 500;
-      color: #ffffff80;
-      text-shadow: none;
-      background: transparent;
-      cursor: pointer;
-      box-shadow: transparent;
-      border: 1px solid #ffffff80;
-      transition: 0.5s ease;
-      user-select: none;
+      width: 15em;
+      --lavender: rgb(194, 82, 226);
+      font-size: 15px;
+      letter-spacing: 0.06em;
+      position: relative;
+      font-family: inherit;
+      border-radius: 0.6em;
+      overflow: hidden;
+      transition: all 0.3s;
+      line-height: 1.4em;
+      border: 2px solid var(--lavender);
+      background: linear-gradient(to right, rgb(194, 82, 226, 0.1) 1%, transparent 40%, transparent 60%, rgb(194, 82, 226, 0.1) 100%);
+      color: var(--lavender);
+      box-shadow: inset 0 0 10px rgb(194, 82, 226, 0.4), 0 0 9px 3px rgb(194, 82, 226, 0.1);
     }
-    #btn:hover, :focus {
-      color: #ffffff;
-      background: #38FBDB;
-      text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
-      box-shadow: 0 0 5px #38FBDB, 0 0 20px #38FBDB, 0 0 50px #38FBDB,
-        0 0 100px #38FBDB;
+
+    button:hover {
+      color: rgb(238, 209, 247);
+      box-shadow: inset 0 0 10px rgb(194, 82, 226, 0.6), 0 0 9px 3px rgb(194, 82, 226, 0.2);
+    }
+
+    button:before {
+      content: "";
+      position: absolute;
+      left: -4em;
+      width: 5em;
+      height: 100%;
+      top: 0;
+      transition: transform .7s ease-in-out;
+      background: linear-gradient(to right, transparent 1%, rgb(194, 82, 226, 0.2) 40%, rgb(194, 82, 226, 0.4) 60%, transparent 100%);
+    }
+
+    button:hover:before {
+      transform: translateX(15em);
     }
   }
 
@@ -112,9 +132,9 @@ button {
     flex-direction: column;
     gap: 20px;
 
-    .icon{
+    .icon {
       display: block;
-      margin-inline:auto ;
+      margin-inline: auto;
       text-align: center;
       height: 7.7%;
       width: 100%;
@@ -125,26 +145,115 @@ button {
       transition: 0.5s ease;
       font-size: 30px;
     }
-    .icon:hover, :focus {
+
+    .icon:hover,
+    :focus {
       color: #ffffff;
-      background: #38FBDB;
+
       text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
-      box-shadow: 0 0 5px #38FBDB, 0 0 20px #38FBDB, 0 0 50px #38FBDB,
-        0 0 100px #38FBDB;
+      box-shadow: 0 0 5px rgb(194, 82, 226), 0 0 20px rgb(194, 82, 226), 0 0 50px rgb(194, 82, 226),
+        0 0 100px rgb(194, 82, 226);
     }
-    
+
   }
 }
 
-.projects-slide-contain{
+.projects-slide-contain {
   background-color: #d9d9d9;
   color: #0C1E3E;
-  padding: 5% 0%;
-  h2{
+  padding: 2% 0%;
+
+  h2 {
     font-size: 4em;
     text-align: center;
   }
-  .project_slide{
+
+  .project-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px 50px;
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    height: 25rem;
+  }
+
+  .card {
+    width: 200px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: width 0.3s ease, height 0.3s ease;
+    background-color: #0C1E3E;
+    color: white;
+    cursor: pointer;
+    border-radius: 12px;
+    border: 5px solid transparent;
+  }
+
+  .img-card img {
+    width: 100%;
+    height: 100%;
+    /* Takes up half of the card's height */
+    object-fit: cover;
+    border-radius:10px;
+  }
+
+  .colcard {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    flex-grow: 1;
+    /* transition: width 0.3s ease, height 0.3s ease; */
+  }
+
+  .colcard h3 {
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    margin-bottom: 10px;
+  }
+
+  .colcard p {
+    flex-grow: 1;
+  }
+
+  button {
+    display: none;
+  }
+
+.card.active {
+    width: 600px;
+    height: 300px;
+    flex-direction: row;
+    border-radius: 10px;
+  }
+  .card.active .img-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%; 
+    height: 100%; 
     
   }
+  .card.active .img-card img {
+    width: 90%; 
+    height: 70%; 
+    transition: all 0.5s ease;
+    object-fit:fill;
+    margin: auto;
+  }
+  
+  .card.active .colcard {
+    flex: 1;
+    text-align: left;
+    justify-content: center;
+  }
+  
+  .card.active .colcard button {
+    display: inline-block; 
+  }
+
 }
