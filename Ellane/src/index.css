@@ -180,7 +180,7 @@ button {
 .projects-slide-contain {
   background-color: #d9d9d9;
   color: #0C1E3E;
-  padding: 2% 0%;
+  padding: 2% 0% 10%;
 
   .proj-heading{
     display: flex;
@@ -197,7 +197,7 @@ button {
     border: 1px solid #ddd;
     border-radius: 10px;
     overflow: hidden;
-    padding: 10px 50px;
+    padding: 10px 20px;
     display: flex;
     flex-direction: row;
     gap: 25px;
@@ -218,7 +218,7 @@ button {
     border: 5px solid transparent;
     background: linear-gradient(#131219, #131219) padding-box, linear-gradient(var(--angle),
         #070707,
-        #576AE2) border-box;
+        #576AE2,#8091fc) border-box;
     animation: 8s rotate linear infinite;
   }
 
@@ -246,7 +246,6 @@ button {
   }
 
   .colcard p {
-    flex-grow: 1;
     display: none;
   }
 
@@ -255,8 +254,8 @@ button {
   }
 
   .card.active {
-    width: 600px;
-    height: 300px;
+    width: 700px;
+    height: 320px;
     flex-direction: row;
     border-radius: 10px;
     background: linear-gradient(#131219, #131219) padding-box, linear-gradient(var(--angle),
@@ -290,8 +289,18 @@ button {
 
   .card.active .colcard button, .card.active .colcard p {
     display: inline-block;
+    margin-top: 10px;
   }
 
+}
+
+.skills{
+  padding: 10% 5%;
+  .col{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
 }
 
 
