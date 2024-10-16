@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { ReactTyped } from "react-typed";
 import './index.css';
 import image from '/src/assets/placeholder1.png';
@@ -7,14 +7,22 @@ import ux1 from '/src/assets/ux.png';
 import { PiLinkedinLogoThin, PiPhoneThin } from "react-icons/pi";
 import { FaGithub } from "react-icons/fa";
 import Marquee from "react-fast-marquee";
+import emailjs from '@emailjs/browser';
+
+import imag1 from '/src/assets/ux.png'; // Replace with the correct image paths
+import imag2 from '/src/assets/filchi.png';
+import imag3 from '/src/assets/cp.png';
+import imag4 from '/src/assets/twl.png';
+import imag5 from '/src/assets/ongpin.png';
 
 
 
 const App = () => {
   const [clickedCard, setClickedCard] = useState(null);
+  const form = useRef();
 
   const handleCardClick = (index) => {
-    setClickedCard(clickedCard === index ? null : index); // Toggle the clicked card
+    setClickedCard(clickedCard === index ? null : index);
   };
   const descriptions = [
     'This project involved designing a user-friendly interface for the TUP Manila website.',
@@ -24,11 +32,38 @@ const App = () => {
     'Currently working on the Ongpin Tower website, enhancing its online presence.'
   ];
 
+  const images = [imag1, imag2, imag3, imag4, imag5];
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm('service_jfrk197', 'template_pl9w02s', form.current, '9-CE23zskKkT2wDXn')
+      .then(
+        (result) => {
+          console.log('SUCCESS!', result.text);
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        }
+      );
+  };
+
 
   return (
     <>
+      <header>
+        <h1> Portfolio</h1>
+        <nav>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
       <div className='Main'>
-        <section className="hero">
+        <section id="hero" className="hero">
           <div className="col">
             <div className="row_info">
               <p>PORTFOLIO</p>
@@ -45,7 +80,10 @@ const App = () => {
                   />
                 </h1>
               </div>
-              <h5>A passionate blabla</h5>
+              <h5>Computer Science graduate seeking a dynamic role as an IT Specialist and Web Developer within a large organization. 
+                Bringing comprehensive expertise in user interface design, web development, information management, and systems evaluation, with a demonstrated ability to improve operational processes. 
+                Highly skilled in WordPress, ReactJS, CSS, Bootstrap, network infrastructure, hardware troubleshooting, a background with game development and design, with a strong ability to work collaboratively 
+                within multidisciplinary teams.</h5>
               <a href="/src/assets/Boniol_Resume.pdf" download="Boniol_Resume.pdf">
                 <button id="btn" ><b>DOWNLOAD RESUME</b></button>
               </a>
@@ -66,7 +104,7 @@ const App = () => {
           </div>
         </section>
 
-        <section className="projects-slide-contain">
+        <section id="projects" className="projects-slide-contain">
           <div className="proj-heading">
             <h2>PREVIOUS WORKS</h2>
             <p>These projects were.... Click the cards to show more details.</p>
@@ -83,7 +121,7 @@ const App = () => {
                   onClick={() => handleCardClick(index)}
                 >
                   <div className="img-card">
-                    <img src={ux1} alt={title} />
+                    <img src={images[index]} alt={title} />
                   </div>
                   <div className="colcard">
                     <h3>{title}</h3>
@@ -95,16 +133,16 @@ const App = () => {
           </div>
         </section>
 
-
-        <section className="skills">
+        <section id="skills" className="skills">
           <div className="col">
             <div className="skill_col1">
               <h1>TECHNICAL SKILLS:</h1>
               <div className="lang">
-                <h3>Website Development</h3>
+                <h3>
+                  Website Development</h3>
               </div>
               <div className="lang">
-                <h3>Website Designing</h3>
+                <h3> Website Designing</h3>
               </div>
               <div className="lang">
                 <h3>Frontend Development</h3>
@@ -146,7 +184,7 @@ const App = () => {
             </div>
           </div>
           <div className="skills-marquee">
-          <h3>LANGUANGES:</h3>
+            <h3>TECH STACK:</h3>
             <Marquee
               autoFill={false}
               pauseOnHover={true}
@@ -154,7 +192,7 @@ const App = () => {
               gradient={false}
               direction={"right"}
               style={{
-                marginBottom:'5em',
+                marginBottom: '5em',
               }}
             >
               <div className="technical_marquee">
@@ -206,18 +244,16 @@ const App = () => {
 
               </div>
             </Marquee>
-            
+
             <h3>DEVELOPER TOOLS:</h3>
             <Marquee
-            autoFill={true}
+              autoFill={true}
               pauseOnHover={true}
               speed={100}
               gradient={false}
               direction={"left"}
               style={{
-                whiteSpace: 'nowrap',
-                display: 'flex',
-                gap: '20px'
+                marginBottom: '3em',
               }}
             >
               <div className="technical_marquee">
@@ -254,7 +290,32 @@ const App = () => {
               </div>
             </Marquee>
           </div>
-          
+        </section>
+
+        <section id="contact" className="contact">
+          <div className="contact_cont">
+            <div className="design-cont">
+              WANT TO KNOW MORE?
+            </div>
+            <div className="form_cont">
+              <h2>Contact Me</h2>
+              <form ref={form} onSubmit={sendEmail} id="contact-form">
+
+                <label>Name</label>
+                <input type="text" name="user_name" required />
+
+                <label>Email</label>
+                <input type="email" name="user_name" required />
+
+                <label>Phone</label>
+                <input type="number" name="user_phone" required />
+
+                <label>Message</label>
+                <textarea name="message" required />
+                <input type="submit" value="Send" />
+              </form>
+            </div>
+          </div>
         </section>
       </div>
     </>
