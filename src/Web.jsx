@@ -80,9 +80,9 @@ const Web = () => {
                   />
                 </h1>
               </div>
-              <h5>Computer Science graduate seeking a dynamic role as an IT Specialist and Web Developer within a large organization. 
-                Bringing comprehensive expertise in user interface design, web development, information management, and systems evaluation, with a demonstrated ability to improve operational processes. 
-                Highly skilled in WordPress, ReactJS, CSS, Bootstrap, network infrastructure, hardware troubleshooting, a background with game development and design, with a strong ability to work collaboratively 
+              <h5>Computer Science graduate seeking a dynamic role as an IT Specialist and Web Developer within a large organization.
+                Bringing comprehensive expertise in user interface design, web development, information management, and systems evaluation, with a demonstrated ability to improve operational processes.
+                Highly skilled in WordPress, ReactJS, CSS, Bootstrap, network infrastructure, hardware troubleshooting, a background with game development and design, with a strong ability to work collaboratively
                 within multidisciplinary teams.</h5>
               <a href="/src/assets/Boniol_Resume.pdf" download="Boniol_Resume.pdf">
                 <button id="btn" ><b>DOWNLOAD RESUME</b></button>
@@ -293,29 +293,49 @@ const Web = () => {
         </section>
 
         <section id="contact" className="contact">
-          <div className="contact_cont">
-            <div className="design-cont">
-              WANT TO KNOW MORE?
+          <div className="row">
+            <div className="contact_cont">
+              <div className='title'>
+                <p>CONTACTS</p>
+                <h1 className='title'>GET IN TOUCH NOW!</h1>
+              </div>
+              <div className="contact_conts">
+                <div className="design-cont">
+                  <h1>PHONE</h1>
+                  <p>GLOBE : +639 35-878-4136</p>
+                  <p>DITO : +639 91-902-9017</p>
+
+                </div>
+                <div className="design-cont">
+                  <h1>EMAIL:</h1>
+                  <p>boniol.ellane@gmail.com</p>
+                </div>
+              </div>
             </div>
             <div className="form_cont">
               <h2>Contact Me</h2>
               <form ref={form} onSubmit={sendEmail} id="contact-form">
-
-                <label>Name</label>
-                <input type="text" name="user_name" required />
-
-                <label>Email</label>
-                <input type="email" name="user_name" required />
-
-                <label>Phone</label>
-                <input type="number" name="user_phone" required />
-
-                <label>Message</label>
-                <textarea name="message" required />
+                <div>
+                  <label>Name: </label>
+                  <input type="text" name="user_name" required />
+                </div>
+                <div>
+                  <label>Email: </label>
+                  <input type="email" name="user_name" required />
+                </div>
+                <div>
+                  <label>Phone: </label>
+                  <input type="number" name="user_phone" required />
+                </div>
+                <div>
+                  <label>Message: </label>
+                  <textarea name="message" required />
+                </div>
                 <input type="submit" value="Send" />
               </form>
             </div>
           </div>
+
         </section>
       </div>
     </>
