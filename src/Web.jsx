@@ -39,11 +39,11 @@ const Web = () => {
     emailjs
       .sendForm('service_jfrk197', 'template_pl9w02s', form.current, '9-CE23zskKkT2wDXn')
       .then(
-        (result) => {
-          console.log('SUCCESS!', result.text);
+        () => {
+          alert('Your message has been sent successfully!'); // Success alert
         },
-        (error) => {
-          console.log('FAILED...', error.text);
+        () => {
+          alert('There was an error sending your message. Please try again.'); // Failure alert
         }
       );
   };
@@ -103,14 +103,11 @@ const Web = () => {
             </div>
           </div>
         </section>
-
         <section id="projects" className="projects-slide-contain">
           <div className="proj-heading">
             <h2>PREVIOUS WORKS</h2>
-            <p>These projects were.... Click the cards to show more details.</p>
+            <p>Take a look at the previous works highlighting web apps, websites, and mockup designs. Click the cards to show more details.</p>
           </div>
-
-          <hr />
           <div className="project-card">
             {['Collaborative Design for UX/UI TUP Manila Website',
               'Collaborative Work for Fil-Chi Job Fair 2024', 'ClearPath Website Design',
@@ -136,7 +133,7 @@ const Web = () => {
         <section id="skills" className="skills">
           <div className="col">
             <div className="skill_col1">
-              <h1>TECHNICAL SKILLS:</h1>
+              <h1><span>TECHNICAL SKILLS:</span></h1>
               <div className="lang">
                 <h3>
                   Website Development</h3>
@@ -183,120 +180,122 @@ const Web = () => {
               </div>
             </div>
           </div>
-          <div className="skills-marquee">
-            <h3>TECH STACK:</h3>
-            <Marquee
-              autoFill={false}
-              pauseOnHover={true}
-              speed={100}
-              gradient={false}
-              direction={"right"}
-              style={{
-                marginBottom: '5em',
-              }}
-            >
-              <div className="technical_marquee">
+          <div className="cont_marquee">
+            <div className="skills-marquee">
+              <h3>TECH STACK:</h3>
+              <Marquee
+                autoFill={false}
+                pauseOnHover={true}
+                speed={100}
+                gradient={false}
+                direction={"right"}
+                style={{
+                  marginBottom: '5em',
+                }}
+              >
+                <div className="technical_marquee">
 
-                <div className='marq_item'>
-                  <img src="https://img.icons8.com/?size=100&id=PndQWK6M1Hjo&format=png&color=000000" alt="Bootstrap Icon" />
-                  BOOTSTRAP
+                  <div className='marq_item'>
+                    <img src="https://img.icons8.com/?size=100&id=PndQWK6M1Hjo&format=png&color=000000" alt="Bootstrap Icon" />
+                    BOOTSTRAP
+                  </div>
+
+                  <div className='marq_item'>
+                    <img src="https://img.icons8.com/?size=100&id=shQTXiDQiQVR&format=png&color=000000" alt="C Icon" />
+                    C LANGUAGE
+                  </div>
+
+                  <div className='marq_item'>
+                    <img src="https://img.icons8.com/?size=100&id=40669&format=png&color=000000" alt="C++ Icon" />
+                    C++ LANGUAGE
+                  </div>
+
+                  <div className='marq_item'>
+                    <img src="https://img.icons8.com/?size=100&id=55251&format=png&color=000000" alt="C# Icon" />
+                    C# LANGUAGE
+                  </div>
+
+                  <div className='marq_item'>
+                    <img src="https://img.icons8.com/?size=100&id=21278&format=png&color=000000" alt="CSS Icon" />
+                    CSS
+                  </div>
+
+                  <div className='marq_item'>
+                    <img src="https://img.icons8.com/?size=100&id=108784&format=png&color=000000" alt="JavaScript Icon" />
+                    JAVASCRIPT
+                  </div>
+
+                  <div className='marq_item'>
+                    <img src="https://img.icons8.com/?size=100&id=20909&format=png&color=000000" alt="HTML Icon" />
+                    HTML
+                  </div>
+
+                  <div className='marq_item'>
+                    <img src="https://img.icons8.com/?size=100&id=123603&format=png&color=000000" alt="ReactJS Icon" />
+                    REACTJS
+                  </div>
+
+                  <div className='marq_item'>
+                    <img src="https://img.icons8.com/?size=100&id=x7XMNGh2vdqA&format=png&color=000000" alt="Tailwind Icon" />
+                    TAILWIND
+                  </div>
+
                 </div>
+              </Marquee>
 
-                <div className='marq_item'>
-                  <img src="https://img.icons8.com/?size=100&id=shQTXiDQiQVR&format=png&color=000000" alt="C Icon" />
-                  C LANGUAGE
+              <h3>DEVELOPER TOOLS:</h3>
+              <Marquee
+                autoFill={true}
+                pauseOnHover={true}
+                speed={100}
+                gradient={false}
+                direction={"left"}
+                style={{
+                  marginBottom: '3em',
+                }}
+              >
+                <div className="technical_marquee">
+                  <div className='marq_item'>
+                    <img src="https://img.icons8.com/?size=100&id=13664&format=png&color=000000" alt="WordPress Icon" />
+                    WORDPRESS
+                  </div>
+
+                  <div className='marq_item'>
+                    <img src="https://img.icons8.com/?size=100&id=zfHRZ6i1Wg0U&format=png&color=000000" alt="Figma Icon" />
+                    FIGMA
+                  </div>
+
+                  <div className='marq_item'>
+                    <img src="https://img.icons8.com/?size=100&id=AZOZNnY73haj&format=png&color=ffffff" alt="GitHub Icon" />
+                    GITHUB
+                  </div>
+
+                  <div className='marq_item'>
+                    <img src="https://img.icons8.com/?size=100&id=9OGIyU8hrxW5&format=png&color=000000" alt="VSCode Icon" />
+                    VSCODE
+                  </div>
+
+                  <div className='marq_item'>
+                    <img src="https://img.icons8.com/?size=100&id=J0SgMWzAxqFj&format=png&color=000000" alt="Jupyter Icon" />
+                    JUPYTER
+                  </div>
+
+                  <div className='marq_item'>
+                    <img src="https://img.icons8.com/?size=100&id=vinpBD5oA3b4&format=png&color=000000" alt="PyCharm Icon" />
+                    PYCHARM
+                  </div>
+
                 </div>
-
-                <div className='marq_item'>
-                  <img src="https://img.icons8.com/?size=100&id=40669&format=png&color=000000" alt="C++ Icon" />
-                  C++ LANGUAGE
-                </div>
-
-                <div className='marq_item'>
-                  <img src="https://img.icons8.com/?size=100&id=55251&format=png&color=000000" alt="C# Icon" />
-                  C# LANGUAGE
-                </div>
-
-                <div className='marq_item'>
-                  <img src="https://img.icons8.com/?size=100&id=21278&format=png&color=000000" alt="CSS Icon" />
-                  CSS
-                </div>
-
-                <div className='marq_item'>
-                  <img src="https://img.icons8.com/?size=100&id=108784&format=png&color=000000" alt="JavaScript Icon" />
-                  JAVASCRIPT
-                </div>
-
-                <div className='marq_item'>
-                  <img src="https://img.icons8.com/?size=100&id=20909&format=png&color=000000" alt="HTML Icon" />
-                  HTML
-                </div>
-
-                <div className='marq_item'>
-                  <img src="https://img.icons8.com/?size=100&id=123603&format=png&color=000000" alt="ReactJS Icon" />
-                  REACTJS
-                </div>
-
-                <div className='marq_item'>
-                  <img src="https://img.icons8.com/?size=100&id=x7XMNGh2vdqA&format=png&color=000000" alt="Tailwind Icon" />
-                  TAILWIND
-                </div>
-
-              </div>
-            </Marquee>
-
-            <h3>DEVELOPER TOOLS:</h3>
-            <Marquee
-              autoFill={true}
-              pauseOnHover={true}
-              speed={100}
-              gradient={false}
-              direction={"left"}
-              style={{
-                marginBottom: '3em',
-              }}
-            >
-              <div className="technical_marquee">
-                <div className='marq_item'>
-                  <img src="https://img.icons8.com/?size=100&id=13664&format=png&color=000000" alt="WordPress Icon" />
-                  WORDPRESS
-                </div>
-
-                <div className='marq_item'>
-                  <img src="https://img.icons8.com/?size=100&id=zfHRZ6i1Wg0U&format=png&color=000000" alt="Figma Icon" />
-                  FIGMA
-                </div>
-
-                <div className='marq_item'>
-                  <img src="https://img.icons8.com/?size=100&id=AZOZNnY73haj&format=png&color=ffffff" alt="GitHub Icon" />
-                  GITHUB
-                </div>
-
-                <div className='marq_item'>
-                  <img src="https://img.icons8.com/?size=100&id=9OGIyU8hrxW5&format=png&color=000000" alt="VSCode Icon" />
-                  VSCODE
-                </div>
-
-                <div className='marq_item'>
-                  <img src="https://img.icons8.com/?size=100&id=J0SgMWzAxqFj&format=png&color=000000" alt="Jupyter Icon" />
-                  JUPYTER
-                </div>
-
-                <div className='marq_item'>
-                  <img src="https://img.icons8.com/?size=100&id=vinpBD5oA3b4&format=png&color=000000" alt="PyCharm Icon" />
-                  PYCHARM
-                </div>
-
-              </div>
-            </Marquee>
+              </Marquee>
+            </div>
           </div>
+
         </section>
 
         <section id="contact" className="contact">
           <div className="row">
             <div className="contact_cont">
               <div className='title'>
-                <p>CONTACTS</p>
                 <h1 className='title'>GET IN TOUCH NOW!</h1>
               </div>
               <div className="contact_conts">
