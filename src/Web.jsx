@@ -315,19 +315,19 @@ const Web = () => {
                 </div>
                 <div className="contact_conts">
                   <div className="design-cont">
-                    <h1>CONTACT NOs.: </h1>
+                    <h2 className='l'>CONTACT NOs.: </h2>
                     <p>GLOBE : +639 35-878-4136</p>
                     <p>DITO : +639 91-902-9017</p>
 
                   </div>
                   <div className="design-cont">
-                    <h1>EMAIL:</h1>
+                    <h2 className='l'>EMAIL:</h2>
                     <p>boniol.ellane@gmail.com</p>
                   </div>
                 </div>
               </div>
               <div className="form_cont">
-                <h2>Contact Me</h2>
+                <h2 >Contact Me</h2>
                 <form ref={form} onSubmit={sendEmail} id="contact-form">
                   <div>
                     <label>Name: </label>

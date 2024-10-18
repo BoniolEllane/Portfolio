@@ -522,6 +522,11 @@ header {
   .design-cont {
     display: flex;
     flex-direction: column;
+    justify-content: right;
+  }
+
+  .design-cont h2.l {
+    text-align: left;
   }
 
   form {
