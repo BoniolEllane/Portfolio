@@ -32,9 +32,9 @@ const Web = () => {
   const descriptions = [
     'This project involved designing a user-friendly interface for the TUP Manila website.',
     'A collaborative effort to connect job seekers and employers at the Fil-Chi Job Fair 2024.',
-    'Designed a clean and modern website for ClearPath, focusing on user experience.',
-    'Developed a text-based adventure game titled "The Writhing Labyrinth."',
-    'Currently working on the Ongpin Tower website, enhancing its online presence.'
+    'Designed a clean and modern website for ClearPath.',
+    'Developed a 2d horror game titled "The Writhing Labyrinth."',
+    'Currently working on the Ongpin Tower website using WordPress.'
   ];
 
   const images = [imag1, imag2, imag3, imag4, imag5];
