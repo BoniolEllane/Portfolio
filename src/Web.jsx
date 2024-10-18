@@ -18,6 +18,11 @@ import imag5 from '/src/assets/ongpin.png';
 
 
 const Web = () => {
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!isMobileMenuOpen);
+  };
   const [clickedCard, setClickedCard] = useState(null);
   const form = useRef();
 
@@ -47,6 +52,14 @@ const Web = () => {
         }
       );
   };
+  const links = [
+    'https://www.figma.com/proto/qpt6EAgg1TcvB9tDvfIBIJ/UX-SOCIETY-WEBSITE?node-id=61-89&starting-point-node-id=61%3A89',
+    'https://www.filchi-jobfair.com/',
+    'https://www.clear-path.ph/', // Link for the third project
+    'https://niloknation.itch.io/the-writhing-labyrinth', // Link for the fourth project
+    'https://ongpintower.com' // Link for the fifth project
+  ];
+  
 
 
   return (
@@ -123,7 +136,7 @@ const Web = () => {
                   <div className="colcard">
                     <h3>{title}</h3>
                     <p>{descriptions[index]}</p>
-                    <button>Learn More</button>
+                    <button onClick={() => window.open(links[index], '_blank')}>Learn More</button>
                   </div>
                 </div>
               ))}
@@ -293,46 +306,50 @@ const Web = () => {
         </section>
 
         <section id="contact" className="contact">
+          
           <div className="row">
-            <div className="contact_cont">
-              <div className='title'>
-                <h1 className='title'>GET IN TOUCH NOW!</h1>
-              </div>
-              <div className="contact_conts">
-                <div className="design-cont">
-                  <h1>PHONE</h1>
-                  <p>GLOBE : +639 35-878-4136</p>
-                  <p>DITO : +639 91-902-9017</p>
+            <div className="row2">
+              <div className="contact_cont">
+                <div className='title'>
+                  <h1 className='title'>GET IN TOUCH NOW!</h1>
+                </div>
+                <div className="contact_conts">
+                  <div className="design-cont">
+                    <h1>CONTACT NOs.: </h1>
+                    <p>GLOBE : +639 35-878-4136</p>
+                    <p>DITO : +639 91-902-9017</p>
 
-                </div>
-                <div className="design-cont">
-                  <h1>EMAIL:</h1>
-                  <p>boniol.ellane@gmail.com</p>
+                  </div>
+                  <div className="design-cont">
+                    <h1>EMAIL:</h1>
+                    <p>boniol.ellane@gmail.com</p>
+                  </div>
                 </div>
               </div>
+              <div className="form_cont">
+                <h2>Contact Me</h2>
+                <form ref={form} onSubmit={sendEmail} id="contact-form">
+                  <div>
+                    <label>Name: </label>
+                    <input type="text" name="user_name" required />
+                  </div>
+                  <div>
+                    <label>Email: </label>
+                    <input type="email" name="user_name" required />
+                  </div>
+                  <div>
+                    <label>Phone: </label>
+                    <input type="number" name="user_phone" required />
+                  </div>
+                  <div>
+                    <label>Message: </label>
+                    <textarea name="message" required />
+                  </div>
+                  <input type="submit" value="SEND" />
+                </form>
+              </div> 
             </div>
-            <div className="form_cont">
-              <h2>Contact Me</h2>
-              <form ref={form} onSubmit={sendEmail} id="contact-form">
-                <div>
-                  <label>Name: </label>
-                  <input type="text" name="user_name" required />
-                </div>
-                <div>
-                  <label>Email: </label>
-                  <input type="email" name="user_name" required />
-                </div>
-                <div>
-                  <label>Phone: </label>
-                  <input type="number" name="user_phone" required />
-                </div>
-                <div>
-                  <label>Message: </label>
-                  <textarea name="message" required />
-                </div>
-                <input type="submit" value="Send" />
-              </form>
-            </div>
+
           </div>
 
         </section>
