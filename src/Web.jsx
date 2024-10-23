@@ -97,7 +97,7 @@ const Web = () => {
                 Bringing comprehensive expertise in user interface design, web development, information management, and systems evaluation, with a demonstrated ability to improve operational processes.
                 Highly skilled in WordPress, ReactJS, CSS, Bootstrap, network infrastructure, hardware troubleshooting, a background with game development and design, with a strong ability to work collaboratively
                 within multidisciplinary teams.</h5>
-              <a href="/src/Boniol_Resume.pdf" download="Boniol_Resume.pdf">
+              <a href="/Boniol_Resume.pdf" download="Boniol_Resume.pdf">
                 <button id="btn" ><b>DOWNLOAD RESUME</b></button>
               </a>
             </div>
