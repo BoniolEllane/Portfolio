@@ -97,7 +97,7 @@ const Web = () => {
                 Bringing comprehensive expertise in user interface design, web development, information management, and systems evaluation, with a demonstrated ability to improve operational processes.
                 Highly skilled in WordPress, ReactJS, CSS, Bootstrap, network infrastructure, hardware troubleshooting, a background with game development and design, with a strong ability to work collaboratively
                 within multidisciplinary teams.</h5>
-              <a href="/src/assets/Boniol_Resume.pdf" download="Boniol_Resume.pdf">
+              <a href="/src/Boniol_Resume.pdf" download="Boniol_Resume.pdf">
                 <button id="btn" ><b>DOWNLOAD RESUME</b></button>
               </a>
             </div>
@@ -136,7 +136,7 @@ const Web = () => {
                   <div className="colcard">
                     <h3>{title}</h3>
                     <p>{descriptions[index]}</p>
-                    <button onClick={() => window.open(links[index], '_blank')}>Learn More</button>
+                    <button onClick={() => window.open(links[index], '_blank')}>View Demo</button>
                   </div>
                 </div>
               ))}
