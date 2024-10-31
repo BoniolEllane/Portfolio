@@ -39,6 +39,7 @@ const Web = () => {
 
   const images = [imag1, imag2, imag3, imag4, imag5];
 
+  // important
   const sendEmail = (e) => {
     e.preventDefault();
     emailjs
